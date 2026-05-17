@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #fffafc;
+  font-family: "Poppins", "Inter", sans-serif;
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@layer components {
+  .section-shell {
+    @apply relative px-5 py-20 md:px-8 md:py-28;
+  }
+
+  .glass {
+    @apply rounded-[2rem] border border-white/65 bg-white/45 backdrop-blur-2xl;
+  }
+
+  .glow-button {
+    @apply rounded-full bg-romanticRed px-7 py-4 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-glow transition duration-300 hover:-translate-y-1 hover:bg-rosePink hover:shadow-[0_0_48px_rgba(255,107,157,0.62)] focus:outline-none focus:ring-4 focus:ring-rosePink/30;
+  }
+}
+
+.romantic-bg {
+  background:
+    linear-gradient(115deg, #fffafc 0%, #fff0f5 28%, #f8ccd9 52%, #e6d0ee 75%, #f6dfd4 100%);
+  background-size: 220% 220%;
+  animation: gradient-dream 13s ease infinite;
+}
+
+.typewriter {
+  position: relative;
+}
+
+.typewriter::after {
+  content: "";
+  display: inline-block;
+  width: 0.12em;
+  height: 1em;
+  margin-left: 0.12em;
+  background: #ff6b9d;
+  vertical-align: -0.12em;
+  animation: caret-blink 0.85s steps(1) infinite;
+}
+
+@keyframes gradient-dream {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes caret-blink {
+  0%,
+  48% {
+    opacity: 1;
+  }
+  49%,
+  100% {
+    opacity: 0;
+  }
+}
