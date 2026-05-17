@@ -47,7 +47,7 @@ export default function Memories({ config }) {
       <SectionHeader
         eyebrow="Our memories"
         title="A Gallery Made of Us"
-        copy="Every tiny frame is a real piece of your story."
+        copy="Every tiny frame is a real piece of our story."
       />
       <div className="mx-auto grid max-w-7xl auto-rows-[13rem] grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {config.memoryImages.map((image, index) => (
