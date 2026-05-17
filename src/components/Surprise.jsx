@@ -33,7 +33,7 @@ export default function Surprise({ config }) {
           </div>
           <div className="px-6 py-10 md:px-12">
             <motion.div
-              className="relative mx-auto mb-7 grid h-24 w-24 place-items-center rounded-full bg-rosePink/15 text-rosePink"
+              className="relative mx-auto mb-7 grid h-24 w-24 place-items-center rounded-full border border-white/75 bg-rosePink/12 text-rosePink shadow-glow"
               animate={
                 unlocked
                   ? { scale: [1, 1.18, 1], rotate: [0, -8, 8, 0] }
@@ -41,24 +41,13 @@ export default function Surprise({ config }) {
               }
               transition={{ duration: unlocked ? 0.9 : 2.4, repeat: unlocked ? 0 : Infinity }}
             >
-              <motion.span
-                className="absolute left-1/2 top-1/2 h-10 w-7 origin-bottom rounded-full bg-rosePink"
-                initial={false}
-                animate={unlocked ? { x: -18, y: -24, rotate: -45 } : { x: -17, y: -18, rotate: -45 }}
-                transition={{ type: "spring", stiffness: 180, damping: 12 }}
-              />
-              <motion.span
-                className="absolute left-1/2 top-1/2 h-10 w-7 origin-bottom rounded-full bg-rosePink"
-                initial={false}
-                animate={unlocked ? { x: -10, y: -24, rotate: 45 } : { x: -3, y: -18, rotate: 45 }}
-                transition={{ type: "spring", stiffness: 180, damping: 12 }}
-              />
-              <motion.span
-                className="absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-rosePink"
-                initial={false}
-                animate={unlocked ? { scale: 0.65, opacity: 0.18 } : { scale: 1, opacity: 1 }}
-              />
-              {unlocked ? <Sparkles className="relative z-10 text-white" size={30} /> : <Heart className="relative z-10 text-white" size={30} />}
+              <span className="absolute inset-3 rounded-full bg-white/65" />
+              <span className="absolute inset-5 rounded-full bg-rosePink shadow-glow" />
+              {unlocked ? (
+                <Sparkles className="relative z-10 text-white" size={34} />
+              ) : (
+                <Heart className="relative z-10 text-white" size={38} fill="currentColor" />
+              )}
             </motion.div>
             <button
               className="glow-button"
