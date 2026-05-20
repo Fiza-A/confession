@@ -5,6 +5,11 @@ export const loveConfig = {
   loverName: "My Love",
   myName: "Forever Yours",
   secretCode: "Taifa@1107",
+  song: {
+    title: "Tera Hone Laga Hoon",
+    artists: "Atif Aslam, Alisha Chinai and Pritam",
+    src: "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c7/b2/bf/c7b2bf0e-b5f9-f895-9c76-1b87d9a62a62/mzaf_7047326532739611933.plus.aac.p.m4a",
+  },
   loveLetterText:
     "My love, every moment with you feels like a beautiful dream. You are my peace, my happiness, my favorite thought, and the reason my heart smiles a little more every day. This website is just a small piece of what I feel for you, but my love for you is endless.",
   featuredImages: {
